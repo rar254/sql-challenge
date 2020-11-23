@@ -37,3 +37,41 @@ dept_emp.emp_no = employees.emp_no;
 
 SELECT * FROM "Department Employees";
 
+--Hercules Employee
+CREATE VIEW "Find Hercules" AS
+SELECT first_name AS "First Name", last_name AS "Last Name", sex AS "Sex"
+FROM employees
+WHERE first_name = 'Hercules' 
+AND last_name LIKE 'B%';
+
+SELECT * FROM "Find Hercules";
+
+-- Sales Department Employees
+CREATE VIEW "Sales Team" AS
+SELECT employees.emp_no AS "Employee Number", employees.last_name AS "Last Name", employees.first_name AS "First Name", departments.dept_name AS "Department Name"
+FROM employees
+INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
+INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
+WHERE departments.dept_name = 'Sales';
+
+SELECT * FROM "Sales Team";
+
+-- Find all employees in Sales & Development department
+CREATE VIEW "Sales/Development employees" AS
+SELECT employees.emp_no AS "Employee Number", employees.last_name AS "Last Name", employees.first_name AS "First Name", departments.dept_name AS "Department Name"
+FROM employees
+INNER JOIN dept_emp ON employees.emp_no = dept_emp.emp_no
+INNER JOIN departments ON dept_emp.dept_no = departments.dept_no
+WHERE dept_name = 'Sales' 
+OR dept_name = 'Development';
+
+SELECT * FROM "Sales/Development employees";
+
+--Employee LastName Frequency
+CREATE VIEW "LastName Frequency" AS
+SELECT last_name, COUNT(last_name) AS "LastName Frequency"
+FROM employees
+GROUP BY (last_name) ORDER BY "LastName Frequency" DESC;
+
+SELECT * FROM "LastName Frequency";
+
