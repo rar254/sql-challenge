@@ -13,3 +13,4 @@ Import/Uplaod your existing CSV files which contain the data/information to your
 
 Step 4: 
 Create tables views to quickly access employee and manager information. 
+SQL queries are stored in "Hackard Queries" folder and titled by SQL_Analysis_Queries.py
