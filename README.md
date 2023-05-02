@@ -3,7 +3,7 @@ SQL
 
 
 Step 1:
-Analyze CSV files to identidy header attributes and relational data. Use ERD(https://www.quickdatabasediagrams.com/) to create entity relationships and identify primary and foreign key attributes. Export sql code to create database and audit to ensure all constraints are accurate.
+Analyze CSV files to identify header attributes and relational data. Use ERD(https://www.quickdatabasediagrams.com/) to create entity relationships and identify primary and foreign key attributes. Export sql code to create database and audit to ensure all constraints are accurate.
 
 Step 2:
 Using PGAdmin create sql-database and begin creating our tables using our SQL exported code. Once you run the code all tables will be created.
