@@ -75,3 +75,6 @@ GROUP BY (last_name) ORDER BY "LastName Frequency" DESC;
 
 SELECT * FROM "LastName Frequency";
 
+SELECT * FROM employees
+WHERE sex = 'M'
+AND birth_date BETWEEN '1950-01-01' AND '1960-12-31';
