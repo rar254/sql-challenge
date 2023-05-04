@@ -78,3 +78,12 @@ SELECT * FROM "LastName Frequency";
 SELECT * FROM employees
 WHERE sex = 'M'
 AND birth_date BETWEEN '1950-01-01' AND '1960-12-31';
+
+SELECT * 
+FROM employees
+WHERE emp_no IN
+(
+	SELECT emp_no
+	FROM dept_emp
+	WHERE dept_no = 'd004'
+);
