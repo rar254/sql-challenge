@@ -87,3 +87,10 @@ WHERE emp_no IN
 	FROM dept_emp
 	WHERE dept_no = 'd004'
 );
+
+-- Employees making $100000 or more
+SELECT salaries.salary, employees.first_name, employees.last_name, employees.sex
+FROM salaries
+INNER JOIN employees ON 
+employees.emp_no = salaries.emp_no
+WHERE salary > 100000;
