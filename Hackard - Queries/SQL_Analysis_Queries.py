@@ -94,3 +94,12 @@ FROM salaries
 INNER JOIN employees ON 
 employees.emp_no = salaries.emp_no
 WHERE salary > 100000;
+
+-- Salaries over $100000 with employee title
+SELECT salaries.salary, employees.first_name, employees.last_name, employees.sex, titles.title
+FROM salaries
+INNER JOIN employees ON 
+employees.emp_no = salaries.emp_no
+INNER JOIN titles ON 
+titles.Title_id = employees.emp_title_id
+WHERE salary > 100000;
